@@ -5,6 +5,8 @@
  */
 package bai5_OOP;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author HuyenNK
@@ -25,5 +27,21 @@ public class Main {
         System.out.println("Xin chào sv1 "+ sv1.getHoTen());
         System.out.println(sv1);
         System.out.println(sv2.toString());
+        
+        SinhVien sv3= new SinhVien();
+        sv3.nhap();
+        sv3.xuat();
+        //ArrayList: mảng động chứa các đối tượng là sinh viên
+        ArrayList <SinhVien> list= new ArrayList<>();
+        list.add(sv1);//thêm các phần tử vào trong list
+        list.add(sv2);
+        list.add(sv3);
+        
+        System.out.println("Danh sách Sinh Viên");
+        //fore+ ctrl+ cách 
+        for (SinhVien sv : list) {
+//            sv.xuat();
+            System.out.println(sv.toString());
+        }
     }
 }

@@ -5,6 +5,8 @@
  */
 package bai5_OOP;
 
+import java.util.Scanner;
+
 /**
  *
  * @author HuyenNK
@@ -93,6 +95,27 @@ public class SinhVien {
     @Override
     public String toString() {
         return "SinhVien{" + "msv=" + msv + ", hoTen=" + hoTen + ", email=" + email + ", tuoi=" + tuoi + '}';
+    }
+    public void nhap (){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Nhập thông tin");
+        System.out.print("MSV: ");
+        this.msv= sc.nextLine();
+        System.out.print("Họ tên: ");
+        this.hoTen= sc.nextLine();
+        System.out.print("Tuổi: ");
+        this.tuoi= sc.nextInt();
+        sc.nextLine();
+        System.out.print("Email: ");
+        this.email= sc.nextLine();
+        
+    }
+    public void xuat(){
+        System.out.println("THÔNG TIN");
+        System.out.println("MSV= "+ msv);
+        System.out.println("Họ tên= "+ hoTen);
+        System.out.println("Email= "+email);
+        System.out.println("Tuoi= "+ tuoi);
     }
 
 
